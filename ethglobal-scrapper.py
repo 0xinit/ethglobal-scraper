@@ -3,8 +3,8 @@ from bs4 import BeautifulSoup
 import csv
 import concurrent.futures
 
-def fetch_projects(page, identifier):
-    url = f"https://ethglobal.com/showcase?events=bangkok&page={page}"
+def fetch_projects(page, event, identifier):
+    url = f"https://ethglobal.com/showcase?events={event}&page={page}"
     headers = {
         'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36'
     }
@@ -38,15 +38,20 @@ def fetch_projects(page, identifier):
     print(f"Page {page}: found {len(filtered_projects)} matching project(s) out of {len(project_cards)} project card(s).")
     return filtered_projects
 
+
+# Prompt user for a custom event place which you can find in ethglobal addressbar (for example, 'bangkok' for devcon)
+event = input("Enter event identifier (e.g., bangkok): ").strip()
+
 # Prompt user for a custom organization identifier which is a logo (for example, 'dkzkp' is for LayerZero)
 identifier = input("Enter organization identifier (e.g., dkzkp): ").strip()
+
 all_projects = []
 pages = list(range(1, 101))  # put any custom number
 
 # Use ThreadPoolExecutor to run up to 10 pages concurrently
 with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
-    # Use a lambda to pass the page and the identifier to the fetch_projects function
-    results = executor.map(lambda p: fetch_projects(p, identifier), pages)
+    # Use a lambda to pass the page, event, and the identifier to the fetch_projects function
+    results = executor.map(lambda p: fetch_projects(p, event, identifier), pages)
     for page_projects in results:
         all_projects.extend(page_projects)
 
