@@ -37,3 +37,26 @@ def fetch_projects(page, identifier):
     
     print(f"Page {page}: found {len(filtered_projects)} matching project(s) out of {len(project_cards)} project card(s).")
     return filtered_projects
+
+# Prompt user for a custom organization identifier which is a logo (for example, 'dkzkp' is for LayerZero)
+identifier = input("Enter organization identifier (e.g., dkzkp): ").strip()
+all_projects = []
+pages = list(range(1, 101))  # put any custom number
+
+# Use ThreadPoolExecutor to run up to 10 pages concurrently
+with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
+    # Use a lambda to pass the page and the identifier to the fetch_projects function
+    results = executor.map(lambda p: fetch_projects(p, identifier), pages)
+    for page_projects in results:
+        all_projects.extend(page_projects)
+
+if all_projects:
+    with open('filtered_projects.csv', 'w', newline='') as csvfile:
+        fieldnames = ['title', 'description']
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        writer.writeheader()
+        for project in all_projects:
+            writer.writerow(project)
+    print(f"Scraping complete. Results saved to filtered_projects.csv. Total matching projects: {len(all_projects)}")
+else:
+    print("No matching projects found.")
