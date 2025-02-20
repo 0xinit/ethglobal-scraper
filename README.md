@@ -1,3 +1,5 @@
+## Ethglobal-scraper
+
 A basic scrapper to get all the projects that won a bounty with an organization and built at EthGlobal.
 
 Currently it doesn't check for the projects that didn't win anything.
@@ -12,7 +14,7 @@ input this in user prompt along with city/name of the event and the scrapper sho
 
 that's all.
 
-To run:
+## To run:
 
 start a python env: python3 -m venv {env name}
 
