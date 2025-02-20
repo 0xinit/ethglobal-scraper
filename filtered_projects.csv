@@ -1,8 +1,8 @@
-title,description
-Boo Market,"Boo Market (BooM) is a omnichain solution for creating ghost liquidity across all chains. One interesting example is bringing memecoins to WorldChain which can be really valuable for users that get WLD monthly, but have no means to expend it."
-Solvnet,A Cross Chain Liquidity Leasing Market for idle funds in Smart Accounts
-METAINTENTS,"A module for smart wallets for default cross-chain transactions, utilizing multiple chains simultaneously"
-FlashFi,A flash loan enabled multi sig that enables DAO treasury to earn yield
-ERC20 Unchained,"Unchaining ERC-20 tokens to enable use across all chains with standard function calls, regardless of where they currently reside. Behind the scenes, LayerZero's OFT handles the balance and movement, transferring tokens wherever needed without any extra steps for the user."
-ERC20 Unchained,"Unchaining ERC-20 tokens to enable use across all chains with standard function calls, regardless of where they currently reside. Behind the scenes, LayerZero's OFT handles the balance and movement, transferring tokens wherever needed without any extra steps for the user."
-Stake of the Art,🚀 Get excited about Stake of the Art! 🎨💎 Artists can now earn royalties just by staking their art in our ecosystem. Every download by paying customers = revenue share for YOU. We're building services that artists & customers will love. Let’s redefine creative ownership! 🙌✨
+title,description,link
+Boo Market,"Boo Market (BooM) is a omnichain solution for creating ghost liquidity across all chains. One interesting example is bringing memecoins to WorldChain which can be really valuable for users that get WLD monthly, but have no means to expend it.",https://ethglobal.com/showcase/boo-market-oekxo
+Solvnet,A Cross Chain Liquidity Leasing Market for idle funds in Smart Accounts,https://ethglobal.com/showcase/solvnet-rr87n
+METAINTENTS,"A module for smart wallets for default cross-chain transactions, utilizing multiple chains simultaneously",https://ethglobal.com/showcase/metaintents-8kjr4
+FlashFi,A flash loan enabled multi sig that enables DAO treasury to earn yield,https://ethglobal.com/showcase/flashfi-g27p4
+ERC20 Unchained,"Unchaining ERC-20 tokens to enable use across all chains with standard function calls, regardless of where they currently reside. Behind the scenes, LayerZero's OFT handles the balance and movement, transferring tokens wherever needed without any extra steps for the user.",https://ethglobal.com/showcase/erc20-unchained-ziaz1
+ERC20 Unchained,"Unchaining ERC-20 tokens to enable use across all chains with standard function calls, regardless of where they currently reside. Behind the scenes, LayerZero's OFT handles the balance and movement, transferring tokens wherever needed without any extra steps for the user.",https://ethglobal.com/showcase/erc20-unchained-ziaz1
+Stake of the Art,🚀 Get excited about Stake of the Art! 🎨💎 Artists can now earn royalties just by staking their art in our ecosystem. Every download by paying customers = revenue share for YOU. We're building services that artists & customers will love. Let’s redefine creative ownership! 🙌✨,https://ethglobal.com/showcase/stake-of-the-art-1nmu6
